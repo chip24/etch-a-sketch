@@ -1,0 +1,38 @@
+/*.row {
+    border:1px solid #00BFFF;
+    height:1em;
+    
+    line-height:1em
+}
+
+.box {
+    display:inline-block;
+    width:6.25%;
+    height:1em;
+    box-sizing:border-box;
+    border:1px solid #034694;
+
+}*/
+
+.box {
+    border: 1px solid #00BFFF;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    
+  }
+  
+  #container {
+    width: 1900px;
+    height: 1900px;
+  }
+  
+  #container>div {
+    height: 25px;
+  }
+
+  .box:hover {
+    background-color: #034694;
+    
+  }
