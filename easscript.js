@@ -1,26 +1,3 @@
-/*function grid(el) {
-    var container = document.createElement("div");
-    container.id = "main";
-    container.className = "container";
-
-    for (i=0; i<16; i+=1) {
-        var row = document.createElement("div");
-        row.className = "row";
-        row.id = "row" + i;
-    
-        for (j=0; j<16; j+=1) {
-            var box = document.createElement("div")
-            box.className = "box";
-            row.appendChild(box);
-        };
-
-        container.appendChild(row);
-    };
-    el.appendChild(container);
-};
-
-grid(document.body);*/
-
 function clearGrid () {
   console.log("clearGrid function invoked.")
   const boxes = document.querySelectorAll(".box, .row");
@@ -50,8 +27,6 @@ const container = document.querySelector('#container');
 
 
 function createBoxes(numBox) {
-  //let board = document.querySelector(".div");
-  //board.innerHTML = "";
   for (let i = 0; i < numBox; i++) {
     const row = container.appendChild(document.createElement('div'));
     row.className = 'row';
