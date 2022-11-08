@@ -21,11 +21,20 @@
 
 grid(document.body);*/
 
+function clearGrid () {
+  console.log("clearGrid function invoked.")
+  const boxes = document.querySelectorAll(".box, .row");
+  boxes.forEach(box => {
+    box.remove();
+  
+});
+}
+
 function promptNumber(){
-  var boxString = prompt("Enter a number of between 2 and 50");
+  const boxString = prompt("Enter a number of between 2 and 50");
   console.log(boxString);
   console.log(typeof boxString);
-  var boxNumber = (+boxString);
+  const boxNumber = (+boxString);
   console.log(typeof boxNumber);
   if (boxNumber < 2 || boxNumber > 50){
     alert("Only enter numbers between 2 and 50");
@@ -38,10 +47,14 @@ function promptNumber(){
 
 const container = document.querySelector('#container');
 
-function createBoxes(numBox) {
 
+
+function createBoxes(numBox) {
+  //let board = document.querySelector(".div");
+  //board.innerHTML = "";
   for (let i = 0; i < numBox; i++) {
     const row = container.appendChild(document.createElement('div'));
+    row.className = 'row';
     for (let j = 0; j < numBox; j++) {
       const square = document.createElement('div');
       square.className = 'box';
@@ -51,14 +64,7 @@ function createBoxes(numBox) {
 }
 
 
-//async function createBoxes(boxNumber) {
-//  console.log(boxNumber);
- // await promptNumber();
-//};
 
-//createBoxes(boxNumber);
-
-//const cont = document.getElements("container");
 const box = document.getElementsByClassName("box");
 
 function colorBoxes() {
@@ -70,9 +76,6 @@ for (let i = 0; i < box.length; i++){
 }
 }
 
-function clearGrid (){
-  let boxes = document.getElementById("box");
-  
-}
+
 
 
